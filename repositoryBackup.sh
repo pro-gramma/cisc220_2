@@ -1,7 +1,7 @@
 #!bin/bash
 #cron
-git clone https://github.com/pro-gramma/cisc220_2.git cisc220_2
 read YYYY MM DD HH <<<$(date +'%Y %m %d %I')
-git add $(grep -l #cron | xargs tar -cvzf "backup${YYYY}${MM}${DD}${HH}.tgz" $1)
+cd $1
+git add $(ls -I backup*.tgz | xargs tar -cvzf "backup${YYYY}${MM}${DD}${HH}.tgz" $1)
 git commit
-git push https://$3:$4@github.com/repoURL.git --all
+git push https://$3:$4@$2 --all
