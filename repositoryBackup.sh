@@ -4,7 +4,7 @@ git add backupsLog
 read YYYY MM DD HH <<<$(date +'%Y %m %d %I')
 cd $1
 FILE=$(ls -I backup*.tgz | xargs tar -cvzf "backup${YYYY}${MM}${DD}${HH}.tgz")
-chmod 755 $FILE
+chmod 777 $FILE
 git add $FILE
 updatebd
 echo "Backup backup${YYYY}${MM}${DD}${HH}.tgz created successfully!" 1>> backupsLog
