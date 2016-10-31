@@ -1,5 +1,6 @@
 #!bin/bash
 #cron
+cd $1
 git add backupsLog
 read YYYY MM DD HH <<<$(date +'%Y %m %d %I')
 FILE="backup${YYYY}${MM}${DD}${HH}.tgz"
