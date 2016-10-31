@@ -3,6 +3,7 @@
 git add backupsLog
 read YYYY MM DD HH <<<$(date +'%Y %m %d %I')
 FILE=$(ls -I backup*.tgz | xargs tar -cvzf "backup${YYYY}${MM}${DD}${HH}.tgz")
+echo $FILE
 git add $FILE
 echo "Backup backup${YYYY}${MM}${DD}${HH}.tgz created successfully!" 1>> backupsLog
 git commit -m "Auto-backup ${DD}/${MM}/${YYYY}"
