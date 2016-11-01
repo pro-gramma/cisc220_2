@@ -1,4 +1,5 @@
 #!bin/bash
+#James Neverson 10193581
 echo -e "IP Address\tSub-Domain"
 for ((i=0;i<=255;i++));do
 	for ((ii=0;ii<=255;ii++));do
