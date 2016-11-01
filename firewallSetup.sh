@@ -1,5 +1,5 @@
-#James Neverson 10193581
 #!bin/bash
+#James Neverson 10193581
 sudo iptables -D INPUT
 sudo iptables -D FORWARD
 sudo iptables -D OUTPUT
